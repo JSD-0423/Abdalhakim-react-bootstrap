@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;400;500;600;700;800&display=swap');
+
+body.light {
+  --brand-primary: #0768ac;
+  --brand-secondary: #03c180;
+  --bg-default: #ffffff;
+  --bg-body: #f0f9ff;
+  --lines-color: #dddddd;
+  --body-text: #333333;
+  --heart-color: #dc143c;
+
+  background-color: var(--bg-body);
+}
+
+body.dark {
+  --brand-primary: #0768ac;
+  --brand-secondary: #03c180;
+  --bg-default: #1a1a1a;
+  --bg-body: #282828;
+  --lines-color: #000000;
+  --body-text: #ededed;
+  --heart-color: #dc143c;
+
+  background-color: var(--bg-body);
+}
+
+* {
+  font-family: 'Nunito Sans', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  text-decoration: none !important;
+}
+
+a {
+  text-decoration: none !important;
+  color: var(--body-text);
+}
+
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin-bottom: 0 !important;
+}
+
+img {
+  display: block;
+  object-fit: cover;
+}
+
+ion-icon[name='star'],
+ion-icon[name='star-outline'],
+ion-icon[name='star-half-outline'] {
+  color: orange;
+}
+
+/* Some transition that affects the Theme */
+button {
+  transition: none !important;
+}
+
+.ellipsis-one-line {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ellipsis-2-lines {
+  height: 2rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.custom-container {
+  padding-inline: 3rem !important;
+}
+
+.primary-color {
+  color: var(--brand-primary) !important;
+}
+
+.secondary-color {
+  color: var(--brand-secondary) !important;
+}
+
+.secondary-bg {
+  background-color: var(--brand-secondary) !important;
+}
+
+.bg-default {
+  background-color: var(--bg-default) !important;
+}
+
+.custom-bg-body {
+  background-color: var(--bg-body) !important;
+}
+
+.body-text {
+  color: var(--body-text) !important;
+}
+
+.custom-border {
+  border: 1px solid var(--lines-color) !important;
+}
+
+.custom-border-left {
+  border-left: 1px solid var(--lines-color) !important;
+}
+
+.custom-border-right {
+  border-right: 1px solid var(--lines-color) !important;
+}
+
+.custom-border-top {
+  border-top: 1px solid var(--lines-color) !important;
+}
+
+.custom-shadow {
+  box-shadow: -3px 0 10px -1px #00000026;
+}
+
+.w-60 {
+  width: 60% !important;
+}
+
+/* ---------------------------- Search, Sort, Filter Section Style  */
+.form-select:focus,
+.form-control:focus {
+  box-shadow: none !important;
+}
+
+/* input.form-select {
+  border-left: 1px solid #938c8c63 !important;
+} */
+
+input,
+select {
+  border: 0 !important;
+  padding-inline: 5px;
+}
+
+/* Details Page Style */
+.custom-px {
+  padding-inline: 12rem;
+}
