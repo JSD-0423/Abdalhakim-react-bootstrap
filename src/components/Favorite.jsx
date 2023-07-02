@@ -24,14 +24,17 @@ const Favorite = ({ show }) => {
       {favorite.favoriteTopics.length !== 0 ? (
         <div className="mt-2 d-flex gap-2 overflow-x-auto">
           {favorite.favoriteTopics.map((topic, i) => (
-            <Link to={`details/${topic.topicId}`} key={i}>
+            <Link to={`details/${topic.topicId}`} key={topic.topicId || i}>
               <div
                 className="rounded-1 overflow-hidden custom-shadow flex-shrink-0"
                 style={{ width: '120px' }}
               >
                 <img className="w-100" src={express} />
-                <div className="p-2">
-                  <span className="body-text fs-6 fw-medium">
+                <div className="p-2 ellipsis-one-line">
+                  <span
+                    className="body-text"
+                    style={{ fontSize: '.9rem', fontWeight: '500' }}
+                  >
                     {topic.topic}
                   </span>
                   <Rating rating={topic.rating} />

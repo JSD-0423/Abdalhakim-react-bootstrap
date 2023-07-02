@@ -4,13 +4,13 @@ import CustomButton from './CustomButton';
 import { useContext } from 'react';
 import { FavoriteContext } from '../context/FavoriteContext';
 
-const DetailsSection = ({ topic, topicId }) => {
+const DetailsSection = ({ topic }) => {
   const [favorite, , addTopicToFavorite, removeTopicFromFavorite] =
     useContext(FavoriteContext);
 
-  const isAdded = favorite.favoriteTopics.reduce((acc, fav) => {
-    return fav.topicId === topicId ? true : false;
-  }, false);
+  const isAdded =
+    favorite.favoriteTopics.filter((fav) => +fav.topicId === topic.id)
+      .length === 1;
 
   return (
     <main className="position-relative">
@@ -48,7 +48,7 @@ const DetailsSection = ({ topic, topicId }) => {
               iconName={`heart-outline`}
               onClick={() =>
                 addTopicToFavorite({
-                  topicId,
+                  topicId: topic.id,
                   image: topic.image,
                   topic: topic.topic,
                   rating: topic.rating,
@@ -62,7 +62,7 @@ const DetailsSection = ({ topic, topicId }) => {
               text="Delete from Favourites"
               iconStyle={`order-1 hydrated ps-1 fs-6`}
               iconName={`trash-outline`}
-              onClick={() => removeTopicFromFavorite(topicId)}
+              onClick={() => removeTopicFromFavorite(topic.id)}
             />
             <p className="credits">Unlimited Credits</p>
           </div>

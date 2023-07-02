@@ -39,7 +39,7 @@ const Details = () => {
         className="h-auto w-100 custom-px text-white py-4"
         style={{ backgroundColor: '#333' }}
       >
-        <DetailsSection topic={topic} topicId={id} />
+        <DetailsSection topic={topic} />
       </section>
       <section className="h-auto w-100 custom-px mt-4">
         <SubTopics topic={topic} />

@@ -69,8 +69,6 @@ const Main = () => {
     setFilter(value);
   };
 
-  // if (isLoading) return <Spinner />;
-
   if (isError) return <ErrorMessage message={isError} />;
 
   return (
